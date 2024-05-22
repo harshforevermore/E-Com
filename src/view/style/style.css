@@ -1,0 +1,378 @@
+.textAlign {
+  text-align: center;
+}
+
+.alignCenter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.marginTop{
+    margin-top: 2rem;
+}
+
+.menubar {
+  list-style-type: none;
+  display: flex;
+}
+.menubar li {
+  padding: 20px;
+}
+.header {
+  color: aquamarine;
+}
+.nav {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  display: inline-block;
+  padding: 10px;
+}
+
+.banenrimag {
+  width: 100%;
+  height: 100%;
+}
+
+/* Navbar */
+
+.navbar {
+  background-color: white;
+  border-bottom: 2px solid black;
+}
+/* 
+.navigation{
+    margin-left: 25%;
+} */
+
+.navbarComponents {
+  margin: 0rem 1rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border-bottom: 2px solid transparent;
+}
+.navbarComponents:hover {
+  border-bottom: 2px solid black;
+}
+
+.navbarTextBox {
+  border: 1px solid rgb(109, 109, 109);
+  border-radius: 0%;
+  width: 100%;
+  height: 2.5rem;
+}
+.navbarTextBox:hover {
+  border: 1px solid black;
+}
+.navbarTextBox:focus {
+  border: 1px solid rgb(109, 109, 109);
+  -webkit-box-shadow: 0 0 2px #525151;
+  box-shadow: 0 0 2px #797878;
+}
+
+.navbarButton {
+  margin-right: 1rem;
+}
+
+.navbarImages{
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navbarImages img {
+  width: 35px;
+  margin: 0rem 1rem;
+  border: 2px solid transparent;
+}
+.navbarImages img:hover {
+  border: 1px solid transparent;
+}
+.navbarImages img:active {
+  border: 2px solid transparent;
+}
+.cartCounter{
+  width: 30%;
+  height: 10%;
+  margin-left: -1.6rem;
+  margin-top: -1.5rem;
+  border-radius: 50%;
+  padding-left: 12%;
+  padding-right: 25%;
+  font-size: 80%;
+  background-color: red;
+  color: white;
+}
+
+/* Navbar end */
+
+/* Footer */
+
+.footer {
+  margin: 1rem 0rem;
+  padding: 2rem 0rem;
+  border-top: 2px solid black;
+}
+
+.footerComponents {
+  border-right: 2px solid black;
+}
+
+.p-heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.componentContent {
+  font-size: 1rem;
+}
+
+.footerLinks {
+  color: rgb(121, 121, 121);
+  text-decoration: none;
+}
+.footerLinks:hover {
+  text-decoration: underline;
+}
+
+.footerButton {
+  border: 2px solid black;
+  border-radius: 3px;
+  background-color: white !important;
+  color: black;
+}
+.footerButton:hover {
+  border: 2px solid black;
+  color: black;
+  background-color: rgb(207, 205, 205) !important;
+}
+.footerButton:active {
+  border: 2px solid black !important;
+  color: black !important ;
+  background-color: rgb(173, 173, 173) !important;
+}
+
+.footerTextBox {
+  border: 1px solid rgb(109, 109, 109);
+  border-radius: 0%;
+  width: 100%;
+  height: 2rem;
+}
+.footerTextBox:hover {
+  border: 1px solid black;
+}
+
+/* footer end */
+
+/* Login Form */
+
+.login-form {
+  margin-top: 1rem;
+  padding: 50px;
+  width: fit-content;
+}
+.textBox {
+  border: 1px solid rgb(109, 109, 109);
+  border-radius: 0%;
+  width: 100%;
+  height: 2.7rem;
+}
+.textBox:hover {
+  border: 1px solid black;
+}
+.textBox:focus {
+  border: 1px solid rgb(109, 109, 109);
+  -webkit-box-shadow: 0 0 2px #525151;
+  box-shadow: 0 0 2px #797878;
+}
+.LoginButton {
+  border: 2px solid black;
+  border-radius: 3px;
+  background-color: white !important;
+  color: black;
+  font-size: 1.3rem;
+  font-weight: 500;
+  padding: 0.7rem 3rem;
+}
+.LoginButton:hover {
+  border: 2px solid black;
+  color: black;
+  background-color: rgb(207, 205, 205) !important;
+}
+.LoginButton:active {
+  border: 2px solid black !important;
+  color: black !important ;
+  background-color: rgb(173, 173, 173) !important;
+}
+
+/* Login Form end */
+
+/* Shop styles */
+
+.shop {
+  margin: 1rem 0rem;
+}
+
+.shopCard {
+  border-radius: 0.2rem;
+  margin-top: 2rem;
+}
+.shopCard:hover {
+  -webkit-box-shadow: 0 0 2px #161616;
+  box-shadow: 0 0 2px #050505;
+  cursor: pointer;
+}
+
+.cardTitle {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+
+  text-align: center;
+}
+
+.cardButtons {
+  display: flex;
+  justify-content: space-between;
+  width: fit-content;
+  margin: 1rem 0rem;
+}
+
+.cardButtons Button {
+  margin: 0rem 1rem;
+}
+
+/* details page side images */
+.side-image-col{
+    width: 20%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 0.5rem;
+}
+.main-image-col{
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    width: 80%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+}
+.main-image {
+    height: 100%;
+  box-shadow: 1px 1px 5px grey;
+  margin-top: 1rem;
+  border-radius: 0rem;
+}
+.side-image {
+  margin-top: 0.5rem;
+  /* box-shadow: 1px 1px 2px white; */
+}
+.side-image:hover {
+    cursor: pointer;
+    -webkit-box-shadow: 0 0 2px #161616;
+  box-shadow: 0 0 2px #050505;
+}
+.accordion{
+  width: 100%;
+}
+.sizeChartAccordion{
+  border: 1px solid black;
+  border-radius: 3px !important;
+  background-color: rgb(224, 224, 224);
+}
+.accordionTitle{
+  width: 100%;  
+}
+
+.accordion .sizeChartAccordion .accordion-header button{
+  background-color: white;
+  box-shadow: none;
+}
+.accordion .sizeChartAccordion .accordion-header button:not(.collapsed){
+  border-bottom: 1px solid black;
+}
+
+.colorButtons{
+  padding: 1rem;
+  margin: 0.4rem;
+  border: 0.1px solid black;
+  -webkit-box-shadow: 0 0 2px #161616;
+  box-shadow: 0 0 2px #050505 ;
+}
+.colorButtons:hover{
+  border: 0.1px solid transparent;
+}
+
+.bestSellerCard{
+  border-radius: 0.2rem;
+}
+.bestSellerCard:hover{
+  -webkit-box-shadow: 0 0 2px #161616;
+  box-shadow: 0 0 2px #050505;
+}
+
+
+/* Add to Cart */
+
+.quantityButtonsCol{
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.quantityButtonsDiv{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+}
+
+.quantityButtonPlus{
+  padding: 0.1rem 0.6rem;
+  margin: 0.6rem 1rem;
+}
+.quantityButtonMinus{
+  padding: 0.1rem 0.7rem;
+  margin: 0.6rem 1rem;
+}
+
+.dustbinImage{
+  margin: 0rem 0.4rem;
+}
+.dustbinImage:hover{
+  cursor:pointer;
+}
+
+
+
+
+
+/* image buttons on payment page */
+
+.backButtonImage {
+  transform: rotate(180deg);
+  width: 3rem;
+  border: 1px solid transparent;
+}
+.backButtonImage:hover {
+  cursor: pointer;
+  filter: invert(20%) sepia(96%) saturate(7354%) hue-rotate(11deg)
+    brightness(99%) contrast(123%);
+}
+.backButtonImage:active {
+  border: 3px solid transparent;
+}
+.forwardButtonImage {
+  width: 3rem;
+  border: 1px solid transparent;
+}
+.forwardButtonImage:hover {
+  cursor: pointer;
+  filter: invert(56%) sepia(72%) saturate(635%) hue-rotate(64deg)
+    brightness(116%) contrast(125%);
+}
+.forwardButtonImage:active {
+  border: 3px solid transparent;
+}
