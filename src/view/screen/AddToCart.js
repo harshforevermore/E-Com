@@ -7,14 +7,14 @@ import "../style/style.css";
 export default function AddToCart() {
   const nav = useNavigate();
   const loc = useLocation();
-  console.log(loc.state);
+  // console.log(loc.state);
   const [quantity, setQuantity] = useState(1);
   // const [rate,setRate]=useState('');
   const [productDetails, setProductDetails] = useState("");
 
   useEffect(() => {
     setProductDetails(loc.state);
-  }, []);
+  }, [loc.state]);
 
   function QuantityAdd() {
     setQuantity(quantity + 1);

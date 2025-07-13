@@ -13,15 +13,25 @@ function Details() {
   const nav = useNavigate();
   const loc = useLocation("");
   const [productDetails, setProductDetails] = useState("");
+  const [selectedSize,setSelectedSize] = useState(null);
+  const [selectedColor,setSelectedColor] = useState(null);
   const [img, setImg] = useState("");
   useEffect(() => {
-    console.log(loc.state);
+    // console.log(loc.state);
     setProductDetails(loc.state);
-  }, []);
-  console.log(productDetails);
+  }, [loc.state]);
+  // console.log(productDetails);
 
   function ImageChange(img) {
     setImg(img);
+  }
+
+  const handleSizeSelect = (size) =>{
+    setSelectedSize(size);
+  }
+
+  const handleColorSelect = (color) =>{
+    setSelectedColor(color);
   }
 
   function OnAddToCart() {
@@ -39,12 +49,13 @@ function Details() {
 
   return (
     <Container style={{ marginTop: "2rem"}} fluid>
-      <Row className="d-flex justify-content-center" style={{ paddingBottom: "2rem",borderBottom:'2px solid black'}}>
-        <Col lg={6} style={{ display: "flex", width:'50%'}}>
+      <Row className="d-flex flex-column flex-lg-row justify-content-center" style={{ paddingBottom: "2rem",borderBottom:'2px solid black'}}>
+        <Col style={{ display: "flex"}}>
           <div className="side-image-col">
             {productDetails &&
               productDetails.sideimage.map((img) => (
                 <Image
+                  key={img}
                   src={img}
                   width={"60%"}
                   onClick={() => ImageChange(img)}
@@ -61,10 +72,10 @@ function Details() {
             />
           </div>
         </Col>
-        <Col lg={6} style={{width:'30%'}}>
+        <Col style={{}}>
           <Row>
             <Col style={{ paddingTop: "1rem" }}>
-              <h4>{productDetails.name}</h4>
+              <h2>{productDetails.name}</h2>
               <h3 style={{ margin: "1rem 0rem" }}>
                 Rs. {productDetails.rate}
                 <del style={{ marginLeft: "1rem", fontSize: "1rem" }}>
@@ -93,39 +104,48 @@ function Details() {
               <b style={{ fontSize: "1.1rem", marginRight: "1rem" }}>size:</b>
 
               {productDetails &&
-                productDetails.size.map((d) => (
+                productDetails.size.map((size) => (
                   <Button
-                    className="footerButton"
-                    style={{ marginRight: "0.2rem" }}
+                    key={size}
+                    className="sizeButtons"
+                    style={{
+                      marginRight: "0.2rem",
+                      backgroundColor: selectedSize === size ? "black" : "white",
+                      color : selectedSize === size ? "white" : "black"
+                  }}
+                  onClick={()=>handleSizeSelect(size)}
                   >
-                    {d}
+                    {size}
                   </Button>
                 ))}
 
               <Row>
-                <Col style={{ margin: "1rem 0rem" }}>
+                <Col style={{ margin: "1rem 0rem"}}>
                   <Accordion defaultActiveKey="0" >
-                    <Accordion.Item eventKey="1" className="sizeChartAccordion">
+                    <Accordion.Item eventKey="1" className="sizeChartAccordion" >
                       <Accordion.Header className="accordionTitle">Size Chart</Accordion.Header>
-                      <Accordion.Body className="d-flex flex-column">
-                        <Image src={require("../image/sizechart.webp")} fluid />
+                      <Accordion.Body className="d-flex flex-column align-items-center">
+                        <Image src={require("../image/sizechart.webp")} style={{zIndex:"999", width:"80%"}} fluid />
                       </Accordion.Body>
                     </Accordion.Item>
                   </Accordion>
                 </Col>
               </Row>
-              <Row>
+              <Row  style={{zIndex:"1"}}>
                 <Col>
                   <b style={{ fontSize: "1.1rem", marginRight: "1rem" }}>
                     Colors:
                   </b>
                   {productDetails &&
-                    productDetails.color.map((d) => (
+                    productDetails.color.map((color) => (
                       <Button
+                        key={color}
                         style={{
-                          backgroundColor: `${d}`,
+                          backgroundColor: `${color}`,
+                          transform : selectedColor === color ? "scale(1.2)" : "none"
                         }}
                         className="colorButtons"
+                        onClick={()=>handleColorSelect(color)}
                       >
                         {""}
                       </Button>
@@ -145,7 +165,7 @@ function Details() {
                     className="footerButton"
                     style={{ width: "70%", margin: "0.1rem 0rem" }}
                   >
-                    Buy It Now
+                    Buy Now
                   </Button>
                 </Col>
               </Row>

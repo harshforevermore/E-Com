@@ -13,7 +13,7 @@ function HomeScreen() {
 
         homeSlider.map(image =>(
 
-      <Carousel.Item>
+      <Carousel.Item key={image.id}>
       <Image src={image.img} fluid />
       </Carousel.Item>
           ))
@@ -26,13 +26,13 @@ function HomeScreen() {
         </Col>
         <Row style={{margin:'0.1rem 0rem'}}>
         { categories.map(category=>(
-            <Col style={{display:'flex',justifyContent:'center'}}>
+            <Col key={category.id} style={{display:'flex',justifyContent:'center'}}>
             <Card className='shopCard' style={{ width: '19rem' }}>
         <Card.Img variant="top" src={category.img} />
         <Card.Body>
         <Card.Title>{category.title}</Card.Title>
         <Card.Text>
-         <h2> {category.offer}</h2>
+         <b style={{fontSize:"2rem",color:"crimson"}}>{category.offer}</b>
         </Card.Text>
         <Button className='footerButton'>Go somewhere</Button>
       </Card.Body>
